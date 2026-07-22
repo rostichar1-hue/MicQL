@@ -1,4 +1,3 @@
-cat > microcode/parser.py << 'EOF'
 import re
 
 def parse(line):
@@ -29,4 +28,3 @@ def parse(line):
         }
 
     return None
-EOF
