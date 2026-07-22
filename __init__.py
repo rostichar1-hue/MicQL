@@ -1,6 +1,3 @@
-cat > microcode/__init__.py << 'EOF'
-from .core import run_file
+from .cli import main
 from .parser import parse
-from .executor import execute
-from .storage import tables
-EOF
+from .executor import execute, tables
