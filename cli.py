@@ -1,6 +1,7 @@
+cat > ~/MicroCode/cli.py << 'EOF'
 import sys
-from microcode.parser import parse
-from microcode.executor import execute
+from parser import parse
+from executor import execute
 
 def run_file(filename):
     with open(filename) as f:
@@ -20,3 +21,4 @@ if __name__ == "__main__":
         print("Usage: micro <file.mc>")
         sys.exit(1)
     print(run_file(sys.argv[1]))
+EOF
