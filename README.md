@@ -40,9 +40,9 @@ micro data.mc
 
 ---
 
-## Why MicroCode?
+## Why MicQL
 
-| SQL | MicroCode | Shorter by |
+| SQL | MicQL | Shorter by |
 |-----|-----------|------------|
 | `SELECT name, age FROM users WHERE city="Moscow" LIMIT 50` | `users:name,age(city="Moscow")50` | **3x** |
 | `INSERT INTO users VALUES(1,'Alex',28)` | `+users {1, "Alex", 28}` | **2x** |
