@@ -1,4 +1,3 @@
-cat > ~/MicroCode/cli.py << 'EOF'
 import sys
 from parser import parse
 from executor import execute
@@ -22,4 +21,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-EOF
