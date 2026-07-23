@@ -1,4 +1,4 @@
-markdown
+```markdown
 # Micql — Minimalistic Query Language
 
 Micql (pronounced "my-queue-l") is a query language that is 3–5 times shorter than SQL.  
@@ -65,6 +65,30 @@ micro data.mc
 | `:` | Select data | `users:name(age>18)10` |
 | `SAVE` | Save data to JSON | `SAVE` |
 | `LOAD` | Load data from JSON | `LOAD` |
+
+---
+
+## Advanced Features
+
+### GROUP BY with Aggregations
+
+```mc
+users:age@city(50)                // average age by city
+users:age.sum@city(50)            // sum of ages by city
+users:age.count@city(50)          // count by city
+```
+
+### JOIN
+
+```mc
+JOIN users orders ON users.id = orders.user_id
+```
+
+### Indexes (coming soon)
+
+```mc
+CREATE INDEX idx_age ON users (age)
+```
 
 ---
 
